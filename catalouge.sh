@@ -83,4 +83,8 @@ VALIDATE $? "installing mongodb client"
 STATUS=$(mongosh --host mongodb.hellodevsecops.space --eval 'db.getMongo().getDBNames().indexOf("catalogue")')
 if [ $STATUS -lt 0 ]
 then
-    mongosh --host mongodb.hellodevsecops.space </app/db/master-data.js
+    mongosh --host mongodb.hellodevsecops.space </app/db/master-data.js &>>$LOG_FILE
+    VALIDATE $? "loading catalogue schema and data"
+else
+        echo -e "Data is already loaded ... $Y SKIPPING $N"
+fi
