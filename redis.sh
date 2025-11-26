@@ -1,4 +1,6 @@
 #!/bin/bash
+
+START_TIME=$(date +%s)
 USERID=$(id -u)
 r="\e[31m"
 g="\e[32m"
@@ -38,7 +40,7 @@ VALIDATE $? "enabling redis 7 module"
 dnf install redis -y &>>$LOGFILE
 VALIDATE $? "installing redis"
 
-sed -i 's/127.0.0.1/0.0.0.0/g' -e '/protected-mode/ c protected-mode no' /etc/redis/redis.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/g' -e '/protected-mode/ c protected-mode no' /etc/redis/redis.conf
 VALIDATE $? "Edited redis.conf to accept remote connections"
 
 systemctl enable redis &>>$LOGFILE
