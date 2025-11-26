@@ -1,9 +1,9 @@
 #!/bin/bash
 
 AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-0bb1c1234567890ab"
+SG_ID="sg-0868578a5e618f64a"
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-ZONE_ID=""
+ZONE_ID="Z100104611ELJF6AI8M2E"
 DOMAIN_NAME="hellodevsecops.space"
 
 #for instance in ${INSTANCES[@]}
