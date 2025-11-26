@@ -1,4 +1,6 @@
 #!/bin/bash
+#!/bin/bash
+export PATH=/usr/local/bin:/usr/bin:/bin
 
 AMI_ID="ami-09c813fb71547fc4f"
 SG_ID="sg-0868578a5e618f64a" # replace with your SG ID
