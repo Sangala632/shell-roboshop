@@ -23,7 +23,6 @@ else
     echo "You are running with root access" | tee -a $LOG_FILE
 fi
 
-
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
