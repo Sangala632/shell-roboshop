@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 export PATH=/usr/local/bin:/usr/bin:/bin
 
 AMI_ID="ami-09c813fb71547fc4f"
